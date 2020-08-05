@@ -1,11 +1,12 @@
 package com.hzcominfo.gradlegrammar;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
+/**
+ * Gradle语法主要体现在.gradle文件中，参考build.gradle和config.gradle文件
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
