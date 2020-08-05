@@ -1,0 +1,37 @@
+//自定义gradle,对于有多个模块的项目，可以把gradle中共用的代码放这里
+//添加多个自定义属性，可以通过ext代码快，具有全局作用域
+ext {
+    //定义全局变量
+    name = "ljw"
+
+    //正式/开发环境
+    isRelease = true
+
+    //建立Map存储，对象名、key都可以自定义
+    androidId = [
+        compileSdkVersion: 29,
+        buildToolsVersion: "29.0.2",
+        minSdkVersion: 17,
+        targetSdkVersion: 29,
+        versionCode: 1,
+        versionName: "1.0"
+    ]
+
+    appId = [
+            app: "com.hzcominfo.gradlegrammar",
+            library: "com.hzcominfo.library"
+    ]
+
+    //正式/开发环境URL
+    url = [
+            "debug" : "www.com.debug.123",
+            "release": "www.com.release.124"
+    ]
+
+    //引入第三方库，如果用很多版本相同的，可以抽取出来，通过${}引用
+    version = "1.1.0"
+    depend = [
+            "appcompat": "androidx.appcompat:appcompat:${version}",
+            "constraintlayout": "androidx.constraintlayout:constraintlayout:1.1.3"
+    ]
+}
